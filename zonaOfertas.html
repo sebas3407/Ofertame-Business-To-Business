@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<?php
+include_once("model.php");
+
+session_start();
+?>
+<html lang="en">
+<head>
+  <title>OFERTAME BUSINESS</title>
+  <meta charset="ansi">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+
+</head>
+<body>
+<nav class="login_default hidden-xs">
+    <div class="container">
+      <div class="flex-container">  
+        <div class="navbar-header flex-item">
+          <a class="ofertame">OFERTAME BUSINESS</a>
+        </div>
+
+        <ul class="nav navbar-nav flex-item">
+        </ul>
+
+        <ul class="nav navbar-nav flex-item pull-right">
+        <nav class="menu">
+            <ul>
+              <li>
+                  <a href="zonaAdmin.html">ADMINISTRADOR</a>
+
+              </li>
+              <li>
+                <a href="logout.php">SALIR</a>
+              </li>
+            </ul>
+          </nav>
+
+        </ul>
+        </div>  
+      </div>
+    </nav>
+
+
+<div class="fullperfil">
+ <div class="container " id="content-block-2">
+    <div class="row white border-radius">
+        <h2 class="text-center content-title white_p">ADMINISTRAR OFERTAS</h2>
+        <br>
+      <div class="col-md-4">
+        <p class="t_perfil_t"></p>
+      </div>
+
+      <?php
+        adminOfertas();
+      ?>
+
+    </div>
+    <br>
+  </div><!--/Content Block -->
+
+</div>
+
+
+<!-- Footer -->
+  <section id="footer">
+    <div class="container">
+      
+      <center>
+          <p class="h6">&copy OFERTAME - Todos los derechos reservados.</p>
+        </center>
+        </div>
+  </section>
+</body>
+</html>
+

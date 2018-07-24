@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>OFERTAME BUSINESS</title>
+  <meta charset="ANSI">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="scripts/validar_registro(ajax,jquery).js"></script> 
+  <script src="scripts.js"></script>
+</head>
+<body>
+<nav class="login_default hidden-xs">
+    <div class="container">
+      <div class="flex-container">  
+        <div class="navbar-header flex-item">
+          <a class="ofertame" href="index.html">OFERTAME BUSINESS</a>
+        </div>
+
+        <ul class="nav navbar-nav flex-item">
+        </ul>
+
+        <ul class="nav navbar-nav flex-item pull-right">
+        <nav class="menu">
+            <ul>
+              <li>
+                <a href="index.html#preguntas">PREGUNTAS</a>
+              </li>
+              <li>
+                <a href="index.html#mas-informacion">M&#193;S INFORMACI&#211;N</a>
+              </li>
+              <li>
+                <a href="index.html#contacto">CONTACTO</a>
+              </li>
+              <li>
+                <a href="login.html">ENTRAR</a>
+              </li>
+              <li>
+                <a href="registro.html">REGISTRO</a>
+              </li>
+            </ul>
+          </nav>
+
+        </ul>
+        </div>  
+      </div>
+    </nav>
+
+
+<div class="fulllogin">
+<a name="login"></a><a name="registro"></a>
+<div class="row">
+  <div class="col-md-12 center">
+        <div class="main-login main-center">
+           <p class="p_reglog">REGISTRO</p>
+          <form class="form-horizontal" method="post">
+            
+            <div class="form-group">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"></span>
+                  <input type="text" class="form-control" name="nombre" id="nombre"  placeholder="Inserta nombre de empresa"/>
+                </div>
+                  <p style='font-size:15px; color:red;' id="name_error"></p>
+              </div>
+            </div>
+
+            <div style="margin-top:-4%;" class="form-group">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"></span>
+                  <input type="text" class="form-control" name="email" id="email"  placeholder="Inserta email de empresa"/>
+                </div>
+                  <p style='font-size:15px; color:red;' id="email_error"></p>
+
+              </div>
+            </div>
+
+
+            <div style="margin-top:-4%;" class="form-group">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                  <input type="password" class="form-control" name="password" id="password"  placeholder="Inserta  contrase&#241;a de empresa"/>
+                </div>
+                  <p style='font-size:15px; color:red;' id="password_error"></p>
+              </div>
+            </div>
+
+            <div style="margin-top:-4%;" class="form-group">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                  <input type="number" class="form-control" name="telefono" id="telefono"  placeholder="Inserta tel&#233;fono de empresa"/>
+                  
+                </div> 
+                <p style='font-size:15px; color:red;' id="phone_error"></p>
+              </div>
+            </div>
+
+
+            <div style="margin-top:-4%;" class="form-group">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="direccion" id="direccion"  placeholder="Inserta direcci&#243;n de empresa"/>
+                </div>
+                  <p style='font-size:15px; color:red;' id="direccion_error"></p>
+              </div>
+            </div>
+
+
+            <div style="margin-top:-4%;" class="form-group">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"></span>
+                  <select name="subs" id = "suscripcion" type="text" class="form-control">
+                     <option value="STANDARD">STANDARD</option> 
+                     <option value="ADVANCED">ADVANCED</option> 
+                     <option value="PROFESIONAL">PROFESIONAL</option>
+                  </select>
+                </div>
+                  <p style='font-size:15px; color:red;'></p>
+              </div>
+            </div>
+            <input type="button" id="btn_submit" name="registro" class="bt_header_login" value="Registrar">
+            <br>
+            <span id = "text_message"></span>
+          </form>
+        </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Footer -->
+  <section id="footer">
+    <div class="container">
+      <div class="row text-center text-xs-center text-sm-left text-md-left bg">
+        <div class="col-xs-12 col-sm-6 col-md-6 margin10">
+          <br>
+          <p class="t_footer">MI CUENTA</p>
+          <ul class="list-unstyled quick-links">
+              <li>
+                    <?php
+                    if(isset($_SESSION['email_empresa']))
+                    {
+                       echo("<a  style='text-transform: uppercase;'  href='perfil.html'>".$_SESSION['email_empresa']."</a>");
+                    }
+                     ?>
+              </li>
+              <li>
+                <?php
+                   if(isset($_SESSION['email_empresa']))
+                    {
+                    echo("<a href='mis-ofertas.html'>MIS OFERTAS</a>");
+                  }
+                ?>
+              </li>
+              <li>
+                <?php
+                   if(isset($_SESSION['email_empresa']))
+                    {
+                    echo("<a href='estadisticas.html'>ESTAD&#205;STICAS</a>");
+                  }
+                ?>
+              </li>
+              <li>
+                <?php
+                   if(isset($_SESSION['email_empresa']))
+                    {
+                    echo("<a href='logout.php'>SALIR</a>");
+                  }
+                ?>
+              </li>
+              <li>
+                  <?php
+                    if(!isset($_SESSION['email_empresa']))
+                    {
+                      echo("<a href='login.html'>ENTRAR</a>");
+                    }               
+                  ?>
+              </li>
+              <li>
+              <?php
+                    if(!isset($_SESSION['email_empresa']))
+                    {
+                      echo("<a href='registro.html'>REGISTRO</a>");
+                    }
+
+                  ?>
+              </li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <br>
+          <p class="t_footer">P&#193;GINA</p>
+          <ul class="list-unstyled quick-links">
+              <li>
+                <a href="#preguntas">PREGUNTAS</a>
+              </li>
+              <li>
+                <a href="#mas-informacion">M&#193;S INFORMACI&#211;N</a>
+              </li>
+              <li>
+                <a href="#contacto">CONTACTO</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+      <center>
+          <p class="h6">&copy OFERTAME - Todos los derechos reservados.</p>
+        </center>
+        </div>
+  </section>
+
+</body>
+</html>
+

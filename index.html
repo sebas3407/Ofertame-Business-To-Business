@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<?php
+include_once("model.php");
+
+session_start();
+?>
+<html lang="en">
+<head>
+  <title>OFERTAME BUSINESS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-default bg hidden-xs">
+    <div class="container">
+      <div class="flex-container">  
+        <div class="navbar-header flex-item">
+          <a class="ofertame" href="index.html">OFERTAME BUSINESS</a>
+        </div>
+
+        <ul class="nav navbar-nav flex-item">
+        </ul>
+
+        <ul class="nav navbar-nav flex-item pull-right">
+        <nav class="menu">
+            <ul>
+              <li>
+                <a href="#preguntas">PREGUNTAS</a>
+              </li>
+              <li>
+                <a href="#mas-informacion">MÁS INFORMACIÓN</a>
+              </li>
+              <li>
+                <a href="#contacto">CONTACTO</a>
+              </li>
+              <li>
+                    <?php
+                    if(isset($_SESSION['email_empresa']))
+                    {
+                       echo("<a  style='text-transform: uppercase;'  href='perfil.html'>".$_SESSION['email_empresa']."</a>");
+                    }
+                     ?>
+                   </a>
+              <li>
+                <?php
+                   if(isset($_SESSION['email_empresa']))
+                    {
+                    echo("<a href='logout.php'>SALIR</a>");
+                  }
+                ?>
+              </li>
+              <li>
+                  <?php
+                    if(!isset($_SESSION['email_empresa']))
+                    {
+                      echo("<a href='login.html'>ENTRAR</a>");
+                    }               
+                  ?>
+              </li>
+              <li>
+              <?php
+                    if(!isset($_SESSION['email_empresa']))
+                    {
+                      echo("<a href='registro.html'>REGISTRO</a>");
+                    }
+
+                  ?>
+              </li>
+
+            </ul>
+          </nav>
+
+        </ul>
+        </div>  
+      </div>
+      <div class="row">
+          <div class="col-lg-1 col-centered">
+            <p class="t_header">Tú utilizas OFERTAME. <br>¿Por qué no tu empresa?</p>
+            <p class="d_header">Amplía a OFERTAME Business y consigue la solución que los empleados adoran y los controles que los administradores técnicos necesitan.</p>
+            <button class="bt_header"><a class="bt_header" href="#mas-informacion">SUSCRÍBETE</a></button>
+            <p class="e_header">@ OFERTAME</p>
+          </div>
+      </div>
+    </nav>
+
+
+<div class="fullpage3">
+<a name="preguntas"></a>
+<div class="container">
+  <div class="row">
+        <div class="col-md-12">
+          <p class="mas_informacion">PREGUNTAS FRECUENTES</p>
+          <p class="preguntas">1. ¿Que puedo hacer con un usuario en Ofertame Business?.</p>
+          <p class="respuestas">Al entrar en nuestro aplicativo tienes derecho a poder crear las ofertas que usted tenga disponible para promocionar sus ofertas.</p>
+          <p class="preguntas">2. Al coger la suscripción solo tengo derecho a tener 10 ofertas?.</p>
+          <p class="respuestas">Sí, nuestro plan inicial únicamente incluye 10 ofertas creadas, siempre puedes ampliar el plan desde el panel de nuestra aplicación.</p>
+          <p class="preguntas">3. Solo puedo tener una empresa vinculada a esta empresa?.</p>
+          <p class="respuestas">Únicamente puedes promocionar una empresa por cuenta vinculada.</p>
+          <p class="preguntas">4. Puedo cambiar de plan si ya tengo uno contratado?</p>
+          <p class="respuestas">Solo podrás cambiar de plan cuando se acaben las ofertas o el plan caduque al mes.</p>
+
+            <button class="bt_info_preguntas"><a class="bt_header" href="#mas-informacion">Más información</a></button>
+        </div>
+
+  </div>
+</div>
+</div>
+
+
+
+<div id="separator">
+
+</div>
+<br>
+
+
+<div class="fullpage1">
+<a name="mas-informacion"></a>
+<div class="container">
+  <div class="row">
+        <div class="col-md-12">
+          <p class="mas_informacion">MÁS INFORMACIÓN</p>
+        </div>
+
+        <div class="col-md-4">
+          <center>
+            <div class="card">
+                <div class="card-img ">
+                  <br>
+                  <p class="standard">STANDARD</p>
+                  <br>
+                </div>
+                  <div class="card-block">
+                  <div class="card-title">
+                      <br>
+                      <p class="p_info">10 OFERTAS DISPONIBLES</p>
+                      <p class="price">30€ / MES</p>
+                  </div>
+                  <hr>
+                  <p class="p_info">- Soporte activo.</p>
+                  <p class="p_info">- Control absoluto de la oferta.</p>
+                  <p class="p_info">- No incluye ninguna oferta gratuita.</p>
+
+                  <div class="card-footer">
+                   <?php
+                    if(!isset($_SESSION['email_empresa']))
+                    {
+                      echo"<button class='subs_info'><a class='bt_header' href='registro.html'>Subscríbete</a></button>";
+                    }
+                     ?>
+                  </div>
+                </div>
+            </div>
+          </center>
+        </div>
+        <br>
+        <div class="col-md-4">
+            <center>
+            <div class="card_mid">
+                <div class="card-img-mid">
+                  <br>
+                  <p class="standard">ADVANCED</p>
+                  <br>
+                </div>
+                  <div class="card-block">
+                  <div class="card-title">
+                      <br>
+                      <p class="p_info">20 + 4 OFERTAS DISPONIBLES</p>
+                      <p class="price">60€ / MES</p>
+                  </div>
+                  <hr>
+                  <p class="p_info">- Soporte activo.</p>
+                  <p class="p_info">- Control absoluto de la oferta.</p>
+                  <p class="p_info">- Incluye 4 ofertas gratuitas con esta subscripción</p>
+
+                  <div class="card-footer">
+                   <?php
+                    if(!isset($_SESSION['email_empresa']))
+                    {
+                      echo"<button class='subs_info'><a class='bt_header' href='registro.html'>Subscríbete</a></button>";
+                    }
+                     ?>
+                  </div>
+                </div>
+            </div>
+          </center>
+        </div>
+        <div class="col-md-4">
+          <center>
+            <div class="card">
+                <div class="card-img ">
+                  <br>
+                  <p class="standard">PROFESIONAL</p>
+                  <br>
+                </div>
+                  <div class="card-block">
+                  <div class="card-title">
+                      <br>
+                      <p class="p_info">30 + 8 OFERTAS DISPONIBLES</p>
+                      <p class="price">90€ / MES</p>
+                  </div>
+                  <hr>
+                  <p class="p_info">- Soporte activo.</p>
+                  <p class="p_info">- Control absoluto de la oferta.</p>
+                  <p class="p_info">- Incluye 8 ofertas gratuitas con esta subscripción</p>
+                  <div class="card-footer">
+                   <?php
+                    if(!isset($_SESSION['email_empresa']))
+                    {
+                      echo"<button class='subs_info'><a class='bt_header' href='registro.html'>Subscríbete</a></button>";
+                    }
+                     ?>
+
+                  </div>
+                </div>
+            </div>
+          </center>
+        </div>
+  </div>
+</div>
+</div>
+
+
+<div id="separator">
+
+</div>
+<br>
+
+<div class="fullpage3">
+<a name="contacto"></a>
+<div class="container">
+  <div class="row">
+        <div class="col-md-12">
+          <p class="mas_informacion">CONTACTO</p>
+          <p class="preguntas">Nos encantaría saber de ti</p>
+          <p class="respuestas">Envía tu información y un representante de OFERTAME se pondrá en contacto con usted.</p>
+        <div class="main-login main-center">
+
+          <form class="form-horizontal" method="post" action="#">
+            
+            <div class="form-group">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"></span>
+                  <input type="text" class="form-control" name="name" id="name"  placeholder="Inserta tu nombre"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"></span>
+                  <input type="text" class="form-control" name="email" id="email"  placeholder="Inserta tu Email"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"></span>
+                  <input type="text" class="form-control" name="username" id="username"  placeholder="Inserta tu teléfono"/>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"></span>
+                  <textarea  type="text" class="form-control big" name="username" id="consulta"  placeholder="Inserta tu consulta"  rows="7" cols="30"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group ">
+             <button class="bt_header_login"><a class="bt_header">Enviar</a></button>
+            </div>
+          </form>
+        </div>
+        </div>
+
+  </div>
+</div>
+</div>
+
+<!-- Footer -->
+  <section id="footer">
+    <div class="container">
+      <div class="row text-center text-xs-center text-sm-left text-md-left bg">
+        <div class="col-xs-12 col-sm-6 col-md-6 margin10">
+          <br>
+          <p class="t_footer">MI CUENTA</p>
+          <ul class="list-unstyled quick-links">
+              <li>
+                    <?php
+                    if(isset($_SESSION['email_empresa']))
+                    {
+                       echo("<a  style='text-transform: uppercase;'  href='perfil.html'>".$_SESSION['email_empresa']."</a>");
+                    }
+                     ?>
+              </li>
+              <li>
+                <?php
+                   if(isset($_SESSION['email_empresa']))
+                    {
+                    echo("<a href='mis-ofertas.html'>MIS OFERTAS</a>");
+                  }
+                ?>
+              </li>
+              <li>
+                <?php
+                   if(isset($_SESSION['email_empresa']))
+                    {
+                    echo("<a href='estadisticas.html'>ESTADISTICAS</a>");
+                  }
+                ?>
+              </li>
+              <li>
+                <?php
+                   if(isset($_SESSION['email_empresa']))
+                    {
+                    echo("<a href='logout.php'>SALIR</a>");
+                  }
+                ?>
+              </li>
+              <li>
+                  <?php
+                    if(!isset($_SESSION['email_empresa']))
+                    {
+                      echo("<a href='login.html'>ENTRAR</a>");
+                    }               
+                  ?>
+              </li>
+              <li>
+              <?php
+                    if(!isset($_SESSION['email_empresa']))
+                    {
+                      echo("<a href='registro.html'>REGISTRO</a>");
+                    }
+
+                  ?>
+              </li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <br>
+          <p class="t_footer">PÁGINA</p>
+          <ul class="list-unstyled quick-links">
+              <li>
+                <a href="#preguntas">PREGUNTAS</a>
+              </li>
+              <li>
+                <a href="#mas-informacion">MÁS INFORMACIÓN</a>
+              </li>
+              <li>
+                <a href="#contacto">CONTACTO</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+      <center>
+          <p class="h6">&copy OFERTAME - Todos los derechos reservados.</p>
+        </center>
+        </div>
+  </section>
+
+</body>
+</html>
+

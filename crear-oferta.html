@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<?php
+
+session_start();
+include_once("model.php");
+
+?>
+
+<html lang="en">
+<head>
+  <title>OFERTAME BUSINESS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="scripts/crear_oferta.js"></script> 
+
+</head>
+<body>
+  
+<nav class="login_default hidden-xs">
+    <div class="container">
+      <div class="flex-container">  
+        <div class="navbar-header flex-item">
+          <a class="ofertame" href="index.html">OFERTAME BUSINESS</a>
+        </div>
+
+        <ul class="nav navbar-nav flex-item">
+        </ul>
+
+        <ul class="nav navbar-nav flex-item pull-right">
+        <nav class="menu">
+            <ul>
+              <li>
+                <a  style='text-transform: uppercase;' href="perfil.html"><?php
+                    echo($_SESSION['email_empresa']);               
+                  ?></a>
+              </li>
+              <li>
+                <a href="logout.php">SALIR</a>
+              </li>
+            </ul>
+          </nav>
+
+        </ul>
+        </div>  
+      </div>
+    </nav>
+
+
+<div class="fullperfil">
+ <div class="container " id="content-block-2">
+    <div class="row white border-radius height650px">
+        <h2 class="text-center content-title white_p">OFERTAS REGISTRADAS</h2>
+        <hr>
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+          <form class="form-horizontal" id="formulario" enctype="multipart/form-data" method="post">
+            <div class="form-group">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"></span>
+                  <input type="text" class="form-control" name="nombre" id="nombre"  placeholder="Nombre oferta" maxlength="50" />
+                </div>
+                <p style='font-size:18px; color:red;' id="nombre_error"></p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"></span>
+                  <select id="categoria">
+                    <option value="categoria">ELIGE UNA CATEGOR&#205;A</option>
+                    <option value="MODA">MODA</option>
+                    <option value="GASTRONOMIA">GASTRONOMIA</option>
+                    <option value="DEPORTE">DEPORTE</option>
+                    <option value="TECNOLOGIA">TECNOLOGIA</option>
+                    <option value="BRICOLAJE">BRICOLAJE</option>
+                    <option value="ENTRETENIMIENTO">ENTRETENIMIENTO</option>
+                    <option value="INFANTIL">INFANTIL</option>
+                  </select>
+                </div>
+                <p style='font-size:18px; color:red;' id="categoria_error"></p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"></span>
+                  <textarea type="text" class="form-control" name="descripcion" id="descripcion"  placeholder="Descripcion oferta" maxlength="80"></textarea>
+                </div>
+                <p style='font-size:18px; color:red;' id="descripcion_error"></p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"></span>
+                  <input type="number" class="form-control" name="unidades" id="unidades"  placeholder="Unidades disponible" min="1" />
+                </div>
+                <p style='font-size:18px; color:red;' id="unidades_error"></p>
+              </div>
+            </div>
+
+             <div class="form-group">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"></span>
+                  <input type="date" class="form-control" name="fecha" id="fecha" />
+                </div>
+                 <p style='font-size:18px; color:red;' id="date_error"></p>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+              <center>
+                <hr>
+                  <p style="font-size: 18px;">IM&#193;GEN DE LA OFERTA</p>
+                  <input type='file' name='foto' id = "foto" size="25" />
+              </center>
+              <p style='font-size:18px; color:red;' id="foto_error"></p>
+            </div>
+             <input type="button" id="btn_crear" name="registro" class="bt_header_login" value="Crear oferta">
+             <br>
+             <span id = "text_message"></span>
+             <br>
+             <br>
+          </form>
+          </div>
+    </div>
+    <br>
+  </div><!--/Content Block -->
+</div>
+
+
+<!-- Footer -->
+  <section id="footer">
+    <div class="container">
+      <div class="row text-center text-xs-center text-sm-left text-md-left bg">
+        <div class="col-xs-12 col-sm-6 col-md-6 margin10">
+          <br>
+          <p class="t_footer">MI CUENTA</p>
+          <ul class="list-unstyled quick-links">
+              <li>
+                    <?php
+                    if(isset($_SESSION['email_empresa']))
+                    {
+                       echo("<a  style='text-transform: uppercase;'  href='perfil.html'>".$_SESSION['email_empresa']."</a>");
+                    }
+                     ?>
+              </li>
+              <li>
+                <?php
+                   if(isset($_SESSION['email_empresa']))
+                    {
+                    echo("<a href='mis-ofertas.html'>MIS OFERTAS</a>");
+                  }
+                ?>
+              </li>
+              <li>
+                <?php
+                   if(isset($_SESSION['email_empresa']))
+                    {
+                    echo("<a href='estadisticas.html'>ESTAD&#205;STICAS</a>");
+                  }
+                ?>
+              </li>
+              <li>
+                <?php
+                   if(isset($_SESSION['email_empresa']))
+                    {
+                    echo("<a href='logout.php'>SALIR</a>");
+                  }
+                ?>
+              </li>
+              <li>
+                  <?php
+                    if(!isset($_SESSION['email_empresa']))
+                    {
+                      echo("<a href='login.html'>ENTRAR</a>");
+                    }               
+                  ?>
+              </li>
+              <li>
+              <?php
+                    if(!isset($_SESSION['email_empresa']))
+                    {
+                      echo("<a href='registro.html'>REGISTRO</a>");
+                    }
+
+                  ?>
+              </li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <br>
+          <p class="t_footer">P&#193;GINA</p>
+          <ul class="list-unstyled quick-links">
+              <li>
+                <a href="index.html#preguntas">PREGUNTAS</a>
+              </li>
+              <li>
+                <a href="index.html#mas-informacion">M&#193;S INFORMACI&#211;N</a>
+              </li>
+              <li>
+                <a href="index.html#contacto">CONTACTO</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+      <center>
+          <p class="h6">&copy OFERTAME - Todos los derechos reservados.</p>
+        </center>
+        </div>
+  </section>
+</body>
+</html>
+

@@ -1,0 +1,726 @@
+@font-face{
+ font-family: 'Roboto-Thin';
+ src: url('font/Roboto-Thin.ttf');
+}
+@font-face{
+ font-family: 'Roboto-Regular';
+ src: url('font/Roboto-Regular.ttf');
+}
+@font-face{
+ font-family: 'Roboto-Light';
+ src: url('font/Roboto-Light.ttf');
+}
+@font-face{
+ font-family: 'gotham';
+ src: url('font/gotham.ttf');
+}
+@font-face{
+ font-family: 'gotham_light';
+ src: url('font/gotham_light.ttf');
+}
+@font-face{
+ font-family: 'Montserrat-Light';
+ src: url('font/Montserrat-Light.ttf');
+}
+
+body{
+  font-family: "Montserrat-Light";
+  overflow-y: visible;
+  height: 100%; 
+  position: relative;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.error_form
+{
+  color: red;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.ofertame{
+  font-family: "Montserrat-Light";
+  font-size: 30px;
+  color: #ffffff;
+  border: none;
+  text-decoration: none;
+}
+.ofertame1{
+  font-family: "Montserrat-Light";
+  font-size: 30px;
+  color: #000;
+  border: none;
+  text-decoration: none;
+}
+.navbar{
+  background: url(img/bg.jpg) no-repeat center center fixed; 
+}
+.ofertame1:hover{
+  font-family: "Montserrat-Light";
+  font-size: 30px;
+  color: #000;
+  border: none;
+  text-decoration: none;
+}
+.ofertame:hover{
+  color: #fff;
+  border: none;
+  text-decoration: none;
+}
+.navbar.navbar-default{
+  border: none;
+  height: 800px;
+  min-height: 100%;
+  margin: 0 auto;
+
+}
+.login_default{
+  background: url(img/bg.jpg) no-repeat center center fixed; 
+  background-size: 100%;
+  height: 50px;
+}
+.black{
+    color: #000;
+
+}
+.bg{
+  background: url(img/bg.jpg) no-repeat center center fixed; 
+  background-size: 100%;
+}
+
+
+.style{
+  background: rgba(255, 255, 255, 0.5);
+}
+.border-radius{
+  border-radius: 5px 5px 5px 5px;
+}
+.col-centered{
+  text-align: center;
+  padding-top: 8%;
+  width: 100%;
+  float: none;
+  margin: 0 auto;
+}
+.col-centered_1{
+  text-align: center;
+  width: 100%;
+  float: none;
+  margin: 0 auto;
+}
+
+.t_header{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+}
+.d_header{
+  padding-top: 5%;
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+}
+.e_header{
+  padding-top: 4%;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+.bt_header{
+  margin-top: 5%;
+  font-size: 20px;
+background-color: transparent;
+  margin-bottom: 2%;
+  color: #fff;
+  padding: 6px 40px;
+  border-radius: 8px;
+  color: #fff;
+}
+.bt_header_login{
+  margin-top: 5%;
+  font-size: 20px;
+  background: url(img/bg.jpg) no-repeat center center fixed; 
+  margin-bottom: 2%;
+  color: #fff;
+  padding: 6px 40px;
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+}
+/*______________*/
+.menu ul{
+  display: flex;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.menu ul{
+  display: flex;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.menu a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+.menu li a{
+  padding: .80em;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Montserrat-Light";
+}
+.menu ul{
+  display: flex;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+.menu1 ul{
+  display: flex;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.menu1 a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+.menu1 li a{
+  padding: .80em;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-family: "Montserrat-Light";
+}
+
+#mid{
+  width: 100%;
+  height: 800px;
+}
+
+/*footer*/
+section .section-title {
+  text-align: center;
+  color: #002d49;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+#footer {
+  font-family: "Montserrat-Light"; 
+  background: url(img/bg.jpg) no-repeat center center fixed; 
+  background-size: 100%;
+
+}
+#footer h5{
+  font-family: "Montserrat-Light"; 
+  padding-left: 10px;
+  border-left: 3px solid #eeeeee;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+  color:#ffffff;
+  z-index: 0;
+}
+.h6{
+  margin-top: 4%;
+  color: #fff;
+  font-size: 13px;
+  font-family: "Montserrat-Light"; 
+}
+
+
+.texto_footer{
+  margin-top: 3%;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Montserrat-Light"; 
+  z-index: -1;
+}
+#footer a {
+  color: #fff;
+  font-size: 15px;
+  font-family: "Montserrat-Light"; 
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+.list-unstyled.quick-links{
+  margin-top: 1%;
+}
+.list-unstyled.quick-links li{
+  margin-top: 3%;
+}
+.img1,.img2,.img3{
+    margin-top: 2%;
+}
+.img1{
+  margin-right: 2%;
+}
+.img3{
+  margin-left: 2%;
+}
+.t_footer{
+  color: #fff;
+  font-size: 25px;
+  font-family: "Montserrat-Light"; 
+}
+.center{
+  text-align: center;
+}
+
+
+.main{
+  margin-top: 70px;
+}
+
+h1.title { 
+  font-size: 50px;
+  font-family: 'Passion One', cursive; 
+  font-weight: 400; 
+}
+
+hr{
+  width: 10%;
+  color: #fff;
+}
+
+.form-group{
+  margin-bottom: 15px;
+}
+
+label{
+  font-family: "Montserrat-Light";
+  margin-bottom: 15px;
+}
+select{
+  width: 100%;
+  height: 25px;
+}
+select,input,
+input::-webkit-input-placeholder {
+    font-size: 14px;
+    padding-top: 3px;
+}
+
+.main-login{
+  background-color: #fff;
+
+}
+
+.main-center{
+  background-color: #fff;
+  margin-top: 30px;
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 80px 80px;
+  border-radius: 10px;
+
+}
+.fulllogin{
+  width: 100%;
+  height: 100%;
+  background: url(img/bg.jpg) no-repeat center center fixed; 
+  background-size: 100%;
+}
+.login-button{
+  margin-top: 5px;
+  background: url(img/bg.jpg) no-repeat center center fixed; 
+  border: none;
+}
+.login-button:hover{
+  margin-top: 5px;
+  background: url(img/bg.jpg) no-repeat center center fixed; 
+  border: none;
+
+}
+.login-register{
+  font-size: 14px;
+  text-align: center;
+}
+.fullpage3{
+  width: 100%;
+  height: 800px;
+  margin-top: -1%;
+  margin-bottom: 5%;
+}
+.fullpage1{
+  width: 100%;
+  height: 800px;
+  margin-top: -1%;
+  margin-bottom: 0%;
+}
+.fullpage2{
+  width: 100%;
+  height: 100%;
+  margin-top: -1%;
+  margin-bottom: 8%;
+}
+.p_reglog{
+  margin-top: -12%;
+  font-size: 32px;
+}
+
+/******************** CARD CSS *******************/
+.card{box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+    text-transform:lowercase;
+}
+.card_mid{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+    text-transform:lowercase;
+}
+.card:hover {box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);}
+.card-block {padding:15px;}
+.card-img {
+  border-radius:8px;
+  max-height:250px;overflow: hidden;  background: url(img/bg.jpg) no-repeat center center fixed; 
+}
+.card-img-mid{
+  margin-top: -5%;
+  border-radius:8px;
+  max-height:300px;
+  overflow: hidden;
+    background: url(img/bg.jpg) no-repeat center center fixed; 
+    margin-bottom: 10%;
+}
+/****************  BORDER ***********/
+.out-border {border:1px solid #e2e2e2;border-radius:10px 10px;}
+
+.col-md-12{
+  margin-top: 5%;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 5%;
+}
+#separator{
+  width: 100%;
+  height: 200px;
+  background: url(img/bg.jpg) no-repeat center center fixed; 
+  background-size: 100%;
+
+  margin-bottom: 5%;
+}
+.standard{
+  font-size: 45px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.subs_info{
+  font-size: 20px;
+  padding: 8px 24px;
+  border: none;
+  background: url(img/bg.jpg) no-repeat center center fixed; 
+  color: #fff;
+  border-radius: 5px;
+}
+.bt_header:hover{
+  background: url(img/bg.jpg) no-repeat center center fixed; 
+  color: #fff;
+}
+.p_info{
+   font-size: 20px;
+   text-transform: none;
+}
+.price{
+  padding-top: 5px;
+   font-size: 30px;  
+}
+.preguntas{
+  margin-top: 3%;
+  font-size: 25px;
+  text-transform: none;
+}
+.respuestas{
+  font-size: 20px;
+}
+.bt_info_preguntas{
+  margin-top: 4%;
+    background: url(img/bg.jpg) no-repeat center center fixed; 
+    border: none;
+    padding: 12px 20px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 8px;
+}
+#consulta{
+  height: 120px;
+}
+.fullperfil{
+  width: 100%;
+  height: 100%;
+  background: url(img/bg.jpg) no-repeat center center fixed; 
+  background-size: 100%;
+  text-align: center;
+}
+.perfil{
+  width: 80%;
+  height: 200px;
+  background-color: #fff;
+}
+.white{
+  background: rgba(255, 255, 255, 1)
+}
+.white_p{
+  color: #000;
+}
+.t_perfil_t{
+  font-size: 25px;
+}
+
+
+/* The Modal (background) * PONER ESTE CSS EN EL ARCHIVO CSS!! */ 
+      .modal {
+        text-align: center;
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 50px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: hidden; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+      
+      /* Modal Content */
+      .modal-content {
+          position: relative;
+          background-color: #fefefe;
+          margin: auto;
+          padding: 0;
+          border: 1px solid #888;
+          width: 30%;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+          -webkit-animation-name: animatetop;
+          -webkit-animation-duration: 0.4s;
+          animation-name: animatetop;
+          animation-duration: 0.4s
+      }
+      
+      /* Add Animation */
+      @-webkit-keyframes animatetop {
+          from {top:-300px; opacity:0} 
+          to {top:0; opacity:1}
+      }
+      
+      @keyframes animatetop {
+          from {top:-300px; opacity:0}
+          to {top:0; opacity:1}
+      }
+      
+      /* The Close Button */
+      .close {
+          color: white;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+      }
+      
+      .modal-header {
+          padding: 2px 16px;
+          background: url(img/bg.png) no-repeat center center fixed; 
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          color: white;
+      }
+      
+      .modal-body {padding: 2px 16px;}
+      
+      .modal-footer {
+        text-align: center;
+          padding: 2px 16px;
+          color: white;
+      }
+
+      .olvidaste_link{
+        font-size: 16px;
+      }
+      .recueprar_p{
+        font-size: 18px;
+      }
+      .publicadas_p{
+        font-size: 25px;
+      }
+
+.oferta_menu{
+  color: black;
+}
+.height500px{
+  height: 500px;
+}
+.height600px{
+  height: 550px;
+}
+.height660px{
+  height: 660px;
+}
+.height555px{
+  height: 555px;
+}
+.height630px{
+	min-height: 522px;
+	height: auto;
+}
+.height430px{
+	min-height: 100px;
+	height: auto;
+}
+
+
+.ofertasPMain{
+  font-size: 12px;
+  padding-top: 2px;
+  color: #fff;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.fechaMain{
+  margin-top: 2px;
+  text-align: center;
+  display:inline-block;
+  margin-left:auto;
+  margin-right:auto;
+  height: 20px;
+  background-color: #26A65B;
+  border-radius: 4px;
+  margin-bottom: 2px;
+}
+
+.categoriaMain{
+  margin-top: 2px;
+  text-align: center;
+  display:inline-block;
+  margin-left:auto;
+  margin-right:auto;
+  height: 20px;
+  margin-right: 2px;
+  background-color: #336E7B;
+  border-radius: 4px;
+}
+.empresaMain{
+  margin-top: 2px;
+  text-align: center;
+  display:inline-block;
+  margin-left:auto;
+  margin-right:auto;
+  height: 20px;
+  margin-right: 2px;
+  background-color: #D35400;
+  border-radius: 4px;
+
+}.ofertasRestantesMain{
+  margin-top: 2px;
+  display:inline-block;
+  margin-left:auto;
+  margin-right:auto;
+  height: 20px;
+  background-color: #D24D57;
+  border-radius: 4px;
+}
+.bt_mis-ofertas{
+  font-size: 15px;
+  background: url(img/bg.jpg) no-repeat center center fixed; 
+  margin-top: 2%;
+  margin-bottom: 2%;
+  color: #fff;
+  padding: 8px 13px;
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+}
+#adminUsersT {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+#adminUsersT td, #adminUsersT th {
+    border: 1px solid #ddd;
+    padding: 8px;
+
+}
+.img_BG{
+   background: url(img/bg.png) no-repeat center center fixed; 
+}
+
+#adminUsersT tr:nth-child(even){background-color: #f2f2f2;}
+
+#adminUsersT tr:hover {background-color: #ddd;}
+
+#adminUsersT th {
+          background: url(img/bg.jpg) no-repeat center center fixed; 
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    color: white;
+}
+.bt_eliminar_user_table{
+  background: transparent;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+#tittle{
+  font-size: 19px;
+}
+.hr_mis_ofertas{
+  border: .5px solid #666666;
+}
+.boxShadow{
+-webkit-box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.27);
+-moz-box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.27);
+box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.27);
+border-radius: 8px;
+}
+.titulo_oferta{
+  padding: 5px 5px 5px 5px;
+}
+.descripcio_oferta{
+  padding: 5px 5px 5px 5px;
+
+  margin-top: -5%;
+  height: 90px;
+}
+.ofertas_esta{
+  font-size: 18px;
+}
+
+.minheightMisofertas{
+min-height: 300px;
+height: auto;
+}
+.height620px{
+min-height: 620px;
+height: auto;
+}
