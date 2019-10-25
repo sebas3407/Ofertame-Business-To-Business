@@ -12,6 +12,6 @@ This project is asociated with Ofertame Business To Client https://github.com/se
 
 ### Credits
 
-- **Sebastian Ortiz Velez** - *Developer* http://sebastianortiz.tk
+- **Sebastian Ortiz Velez** - *Developer*
 - **Cristian Garcia Serrate** - *Developer*
 - **David Espier Corbacho** - *Developer and designer*
